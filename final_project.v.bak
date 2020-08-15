@@ -1,0 +1,62 @@
+module final_project(output reg[7:0] R, G, B,output reg [3:0]A,input clk);
+
+
+parameter logic [7:0] num1 [7:0] = '{8'b00000000,
+												 8'b01111110,
+												 8'b01111110,
+												 8'b01111110,
+												 8'b01111110,
+												 8'b01111110,
+												 8'b01111110,
+												 8'b00000000};
+divfreq F0(clk, CLK_div1000);
+div F1(clk,CLK_div1);
+byte cnt;
+logic [7:0] num1_char [7:0];
+
+initial
+begin
+	cnt=0;
+	G = 8'b11111111;
+	B = 8'b11111111;
+end
+always @(posedge CLK_div1000)
+	begin
+		if (cnt >=7)
+			cnt <=0;
+		else
+			cnt<= cnt+1;
+			
+		A <= {cnt,1'b1};
+		R <= num1[cnt];
+end
+
+endmodule
+	
+module divfreq(input CLK,output reg CLK_div);
+reg [24:0] Count;
+always@(posedge CLK)
+ begin 
+   if(Count>25000)
+	  begin
+	    Count<=25'b0;
+		 CLK_div<=~CLK_div;
+	  end
+	else
+		Count <=Count+1'b1;
+	end
+endmodule
+
+module div(input CLK,output reg CLK_div);
+reg [24:0] Count;
+always@(posedge CLK)
+ begin 
+   if(Count>25000000)
+	  begin
+	    Count<=25'b0;
+		 CLK_div<=~CLK_div;
+	  end
+	else
+		Count <=Count+1'b1;
+ end
+endmodule
