@@ -1,0 +1,13 @@
+
+State Machine - |final_project|step2
+Name step2.1001 step2.1000 step2.0111 step2.0110 step2.0101 step2.0100 step2.0011 step2.0010 step2.0001 step2.0000 
+step2.0000 0 0 0 0 0 0 0 0 0 0 
+step2.0001 0 0 0 0 0 0 0 0 1 1 
+step2.0010 0 0 0 0 0 0 0 1 0 1 
+step2.0011 0 0 0 0 0 0 1 0 0 1 
+step2.0100 0 0 0 0 0 1 0 0 0 1 
+step2.0101 0 0 0 0 1 0 0 0 0 1 
+step2.0110 0 0 0 1 0 0 0 0 0 1 
+step2.0111 0 0 1 0 0 0 0 0 0 1 
+step2.1000 0 1 0 0 0 0 0 0 0 1 
+step2.1001 1 0 0 0 0 0 0 0 0 1 

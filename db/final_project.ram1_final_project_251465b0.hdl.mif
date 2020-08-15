@@ -1,0 +1,19 @@
+-- begin_signature
+-- final_project
+-- end_signature
+WIDTH=8;
+DEPTH=8;
+
+ADDRESS_RADIX=UNS;
+DATA_RADIX=BIN;
+
+CONTENT BEGIN
+	7 :	11111011;
+	6 :	11110111;
+	5 :	11101111;
+	4 :	11011111;
+	3 :	10111111;
+	2 :	01111111;
+	1 :	10111111;
+	0 :	11011111;
+END;
